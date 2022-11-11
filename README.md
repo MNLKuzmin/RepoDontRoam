@@ -20,27 +20,27 @@ These and more are the information that we will be able to provide to the users 
 This project uses the King County House Sales dataset, which can be found in kc_house_data.csv. Here is a brief description of the meaning of each column:
 
 Column Names and Descriptions for King County Data Set
-id - Unique identifier for a house
-date - Date house was sold
-price - Sale price (prediction target)
-bedrooms - Number of bedrooms
-bathrooms - Number of bathrooms
-sqft_living - Square footage of living space in the home
-sqft_lot - Square footage of the lot
-floors - Number of floors (levels) in house
-waterfront - Whether the house is on a waterfront
-view - Quality of view from house
-condition - How good the overall condition of the house is. Related to maintenance of house.
-grade - Overall grade of the house. Related to the construction and design of the house.
-sqft_above - Square footage of house apart from basement
-sqft_basement - Square footage of the basement
-yr_built - Year when house was built
-yr_renovated - Year when house was renovated
-zipcode - ZIP Code used by the United States Postal Service
-lat - Latitude coordinate
-long - Longitude coordinate
-sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
-sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
+* id - Unique identifier for a house
+* date - Date house was sold
+* price - Sale price (prediction target)
+* bedrooms - Number of bedrooms
+* bathrooms - Number of bathrooms
+* sqft_living - Square footage of living space in the home
+* sqft_lot - Square footage of the lot
+* floors - Number of floors (levels) in house
+* waterfront - Whether the house is on a waterfront
+* view - Quality of view from house
+* condition - How good the overall condition of the house is. Related to maintenance of house.
+* grade - Overall grade of the house. Related to the construction and design of the house.
+* sqft_above - Square footage of house apart from basement
+* sqft_basement - Square footage of the basement
+* yr_built - Year when house was built
+* yr_renovated - Year when house was renovated
+* zipcode - ZIP Code used by the United States Postal Service
+* lat - Latitude coordinate
+* long - Longitude coordinate
+* sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
+* sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
 
 ### How are we going to get there
 
