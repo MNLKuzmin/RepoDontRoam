@@ -194,10 +194,11 @@ There seems to be some sort of pattern here, so this would need further studying
 Another way that we can run our model is with a train-test split. It's the same logic as the cross validation but instead of repeating it with different splits I do it only one time.
 It is less reliable because doing only one split makes the test more subject to randomness, but there are things that we can study with this setting like the mean squared error and root mean squared error.
 
-Train Root Mean Squared Error: 91345.31719765035
-Train R squared value: 0.804295603536762
-Test Root Mean Squared Error: 88378.10912550481
-Test R squared value: 0.8097102215361878
+<br>Train Root Mean Squared Error: 91345.31719765035
+<br>Train R squared value: 0.804295603536762
+<br>Test Root Mean Squared Error: 88378.10912550481
+<br>Test R squared value: 0.8097102215361878
+
 Let us take a look at how our the train sample of our model fits compared to the actual data:
 
 ![ModelvsData](./Graphs/ModelVsData.png)
@@ -269,7 +270,7 @@ One factor that turned out to be crucial is the renovations on the house. We cou
 
 We could also do a more in depth study about the areas even within the zipcode, to produce targeted statistics and be able to provide an even more precise recommendation in terms of where to look for a house.
 
-With the information we found, we could create and algorythm that takes into account not only the desired house features, but also the user's monthly salary and available cash for down payment. <br>Inputing also the current interest rate and the usual taxes for their state we can determine what would be the closing costs, the monthly mortgage for the user and therefore the possible range of prices of houses that they can afford. <br>If they can't afford the house that they like, we could still help them out. Considering that every month that passes, the user can save up the money that would have gone toward the mortgae to build their savings instead, we can also recommend the user to wait and purchase a house with a bigger down payment (hoping for not too high fluctuations of the market) and in how many months they could afford that house.
+With the information we found, we could create and algorythm that takes into account not only the desired house features, but also the user's monthly salary and available cash for down payment. <br>Inputing also the current interest rate and the usual taxes for their state we can determine what would be the closing costs, the monthly mortgage for the user and therefore the possible range of prices of houses that they can afford. <br>If they can't afford the house that they like, we could still help them out. <br>Considering that every month that passes, the user can save up the money that would have gone toward the mortgae to build their savings instead, we can also recommend the user to wait and purchase a house with a bigger down payment (hoping for not too high fluctuations of the market) and in how many months they could afford that house.
 <br>With the new technique we found for adding higher degree terms to the equation, without overfitting, we can improve the algorythm indefinitely, especially if we can input more variables, adding always more terms and increasing the grade of the polynomial to reach an ever more complex and precise model.
 
 ## For More Information
