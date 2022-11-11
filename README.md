@@ -12,7 +12,7 @@ Don't Roam Buy a Home will help users answer some questions like:
 - What is the best neighborhood for me to look into buying a house, given my budget?
 - What are the most important factors to look at, when evaluating a house and my needs in a house?
 - Can I afford an extra bedroom/bathroom or should I save up and add one later on?
-- Would it be better to buy a new property or an old run down one and use the extra money to renovate?
+- Would it be better to buy a new property or a fixer upper and use the extra money to renovate?
 
 These and more are the information that we will be able to provide to the users of the app, starting from our analysis of the King's County Housing Market.
 
@@ -77,7 +77,7 @@ Column Names and Descriptions for King County Data Set
 * sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
 * sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
 
-To get a first sense of what type of correlations the variables have with each other I am going to plot a heatmap and a scatterplot.
+To get a first sense of what type of correlations the variables have with each other we can generate a heatmap and a scatterplot.
 
 ![HeatMap](./Graphs/HeatMap.png)
 
@@ -191,7 +191,7 @@ There seems to be some sort of pattern here, so this would need further studying
 
 ### Train Test Split:
 
-Another way that we can run our model is with a train-test split. It's the same logic as the cross validation but instead of repeating it with different splits I do it only one time.
+Another way that we can run our model is with a train-test split. It's the same logic as the cross validation but instead of repeating it with different splits we do it only one time.
 It is less reliable because doing only one split makes the test more subject to randomness, but there are things that we can study with this setting like the mean squared error and root mean squared error.
 
 <br>Train Root Mean Squared Error: 91345.31719765035
@@ -260,7 +260,8 @@ The features that we saw influence more heavily the price are: the area (in term
 Given everything that we have seen in this study, there are some concrete business recommendations that we can give to the users of "Don't Roam Buy a Home" to make the best educated choice in purchasing their home:
 
 Scout the areas which have houses in your price range. Depending on the zipcode the average sale price for a house can go from 260 thousand dollars to almost a million.
-<br>Save some of your budget for renovations. In particular we recommend buying a house in worse condition but with more squarefootage and then improving it - renovations turned out to be a very important factor in the price of a house, and while adding a bathroom can cost as little as 2500 dollars (link) buying a house with an extra bathroom will increase your price by roughly 50K.
+<br>Save some of your budget for renovations. 
+In particular we recommend buying a house in worse condition but with more squarefootage and then improving it - renovations turned out to be a very important factor in the price of a house, and while adding a bathroom can cost as little as 2500 dollars (link) buying a house with an extra bathroom will increase your price by roughly 50K.
 <br>Try to buy during low season, months like December January and February have the lowest average price sales, while in the spring and summer houses tend to sell for more.
 <br>Keep an eye on number of bathrooms and squarefootage of the house, as factors that will influence the price of the property.
 
