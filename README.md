@@ -204,16 +204,16 @@ Let us take a look at how our the train sample of our model fits compared to the
 
 ## Polynomial Regression:
 
-Another thing that we can do to improve our model to fit our data is to include higher degree terms, using a polynomial fit. This includes products between the different independent variables, including higher powers of the single variables, up until a power that I can set.
+Another thing that we can do to improve our model to fit our data is to include higher degree terms, using a polynomial fit. This includes products between the different independent variables, including higher powers of the single variables, up until a power that is set.
 
 ### Third order Polynomial regression
 
 The R-squared value that we obtained from our model including polynomials up until the third grade is 0.764
 
-This is a pretty good R squared, but what usually happens with the polynomial regression is that we are fitting the model on the train set so well, that we are actually overfitting and it will perform very poorly on the test set, because we are picking up not only the actual real trends of the relationship between the variables, but also some random noise, given by the random data.
+This is a pretty good R squared, but what usually happens with the polynomial regression is that we are fitting the model on the train set so well, that we are actually overfitting and it will perform very poorly on the test set.
 <br>This is confirma by our train-test split test that gave us an R squared of 0.721 for the train but a NEGATIVE R squared of -0.935 for the test.
 
-The fact that R squared on the test is so bad shows us that we fitted very well the train, in fact too well picking up random noise. This model is not good becayse even if it can explain very well the train it cannot generalize to a randomly chosen test set.
+The fact that R squared on the test is so bad shows us that we fitted very well the train, in fact too well picking up random noise. This model is not good because even if it can explain very well the train it cannot generalize to a randomly chosen test set.
 
 ### Second Order Polynomial
 What is usually recommended in this situation is to lower the order of the polynomial, which will reduce the number of variables, and overall give us a more simple curve for our model.
@@ -227,14 +227,15 @@ But there is something else that we can do, for which the Polynomial regression 
 
 ### Using Polynomial terms to create new variables 
 Usually one thing that is suggested to improve the model is trying to come up with new variables that can increase the correlations, by multiplying some of the independent variables we have.
-But it is not necessary to try to multiply them at random, and the polinomial regression even though it usually leads to overfitting, in this case can be very useful.
+But it is not necessary to try to multiply them at random, and the polynomial regression even though it usually leads to overfitting, in this case can be very useful.
 We are going to run again the model with the polynomial regression, and we are going to look at the factors that performed best (since the polynomial features contain also all the possible interactions between the variables, up until the power that we selected).
 Then we are going to take only the terms that performed best, that have a higher coefficient, and make a model again fitting with just those, adding them to our best performing model so far.
 
-best_coefficients='floors^2*long', 'bdrms*yr_reno', 'condition*yr_renovated', 'bdrms*sqft_basement*zipcode', 'yr_built^2*zipcode'
+These turned out to be the best performing coefficients='floors^2*long', 'bdrms*yr_reno', 'condition*yr_renovated', 'bdrms*sqft_basement*zipcode', 'yr_built^2*zipcode'
 
-A quick note: these coefficients don't need to make sense from a logical point of view, so we are transitioning from inferential statistic to predictive modeling where we our top priority is not understanding the parameters that determin a change in our target and describe the relationship best, but to have a model that can work as well as possible in predicting the price of a house, even if not all the coefficients are logical.
-Now let us create new columns with these features, and we will add them to the DataFrame and run the cross validation model again.
+A quick note: these coefficients don't need to make sense from a logical point of view, so we are transitioning from inferential statistic to predictive modeling where our top priority is not understanding the parameters that determin a change in our target and describe the relationship best, but to have a model that can work as well as possible in predicting the price of a house, even if not all the coefficients are logical.
+Now let us add these features, and run the cross validation model again.
+Here are the results:
 
 train MSRE: 90466.76806263774 
 <br>test MSRE: 91548.80493847934
@@ -245,17 +246,17 @@ We can see how in this way including only some of the terms generated by the pol
 
 Ultimately what we tried as a new technique helped improving the fit, is generating new features instead of trying randomly some products of variables, using the poly fit to our aid, but avoiding its usual issue of overfitting.
 
+This technique could be used with however high polynomials we want, wihtout having the overfitting, since we are going to chose only the few best terms that describe the interaction and not all of them.
+
 ### Predictions on price of the house
 
 With this in depth analysis we were able to create different models, with polynomials and not, that interepret well the results of our data set, with an R squared as high as 80%.
 Plugging into these models the information we have from a user about the area where they would like to buy a house, number of bedrooms bathrooms and floors, we should be able to predict the expected price of the house with an error of roughly 90K.
-The features that we saw influence more heavily the price are: the area (in terms of zipcode), whether the house was renovated or not, the number of bathrooms, the sqft living area and the time of the year in which the house was sold.
-Two other coefficients that we found have a pretty high correlation with price are bathrooms and squarefoot living area.
-With these conclusions in mind let us see what concrete recommendations we can give to our users to be able to make the best choice for their dream home, in relation to their budget.
+The features that we saw influence more heavily the price are: the area (in terms of zipcode), whether the house was renovated or not, the number of bathrooms, the sqft living area and the month in which the house was sold.
 
 ## Recommendations: 
 
-Given everything that we have seen in this study, there are some concrete business recommendations that we can give to the users of "Don't Roam Buy a Home"vto make the best educated choice in purchasing their home:
+Given everything that we have seen in this study, there are some concrete business recommendations that we can give to the users of "Don't Roam Buy a Home" to make the best educated choice in purchasing their home:
 
 Scout the areas which have houses in your price range. Depending on the zipcode the average sale price for a house can go from 260 thousand dollars to almost a million.
 <br>Save some of your budget for renovations. In particular we recommend buying a house in worse condition but with more squarefootage and then improving it - renovations turned out to be a very important factor in the price of a house, and while adding a bathroom can cost as little as 2500 dollars (link) buying a house with an extra bathroom will increase your price by roughly 50K.
@@ -268,7 +269,8 @@ One factor that turned out to be crucial is the renovations on the house. We cou
 
 We could also do a more in depth study about the areas even within the zipcode, to produce targeted statistics and be able to provide an even more precise recommendation in terms of where to look for a house.
 
-With the information we found, we could create and algorythm that takes into account not only the desired house features, but also the user's monthly salary and available cash for down payment. Inputing also the current interest rate and the usual taxes for their state we can determine what would be the closing costs, the monthly mortgage for the user and therefore the possible range of prices of houses that they can afford. If they can't afford the house that they like, we could still help them out. Considering that every month that passes, the user can save up the money that would have gone toward the mortgae to build their savings instead, we can also recommend the user to wait and purchase a house with a bigger down payment (hoping for not too high fluctuations of the market) and in how many months they could afford that house.
+With the information we found, we could create and algorythm that takes into account not only the desired house features, but also the user's monthly salary and available cash for down payment. <br>Inputing also the current interest rate and the usual taxes for their state we can determine what would be the closing costs, the monthly mortgage for the user and therefore the possible range of prices of houses that they can afford. <br>If they can't afford the house that they like, we could still help them out. Considering that every month that passes, the user can save up the money that would have gone toward the mortgae to build their savings instead, we can also recommend the user to wait and purchase a house with a bigger down payment (hoping for not too high fluctuations of the market) and in how many months they could afford that house.
+<br>With the new technique we found for adding higher degree terms to the equation, without overfitting, we can improve the algorythm indefinitely, especially if we can input more variables, adding always more terms and increasing the grade of the polynomial to reach an ever more complex and precise model.
 
 ## For More Information
 
