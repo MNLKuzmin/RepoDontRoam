@@ -1,52 +1,78 @@
 # Phase 2 Project Description
 
-Another module down - you're almost half way there!
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-v2-3/main/halfway-there.gif)
+## Business Problem - Don't roam buy a home
 
-All that remains in Phase 2 is to put your newfound data science skills to use with a large project!
+The real estate startup “Don’t Roam Buy a Home” (DRBH for short) has contacted us as they are trying to create an app targeted at those who do not feel like they can compete in the current brutal real estate market. DRBH’s application is meant for the normal average person that does not have much knowledge about the real estate market but is trying to understand what would be the best investment given their resources and needs.
 
-In this project description, we will cover:
+In our business case, DRBH has hired us in order to assist with analyzing raw real estate data and breaking down the trends of the housing market in King County. Their end product centers around having users enter the desired number of bedrooms, bathrooms, the overall residence’s square feet or lot size as well as neighborhood, budget in terms of savings and possible monthly mortgage. With this information the app will provide the user key information to help make the most educated choice and have the most profitable investment with the available funds.
 
-* Project Overview: the project goal, audience, and dataset
-* Deliverables: the specific items you are required to produce for this project
-* Grading: how your project will be scored
-* Getting Started: guidance for how to begin working
+Don't Roam Buy a Home will help users answer some questions like: 
+- What is the best neighborhood for me to look into buying a house, given my budget?
+- What are the most important factors to look at, when evaluating a house and my needs in a house?
+- Can I afford an extra bedroom/bathroom or should I save up and add one later on?
+- Would it be better to buy a new property or an old run down one and use the extra money to renovate?
 
-## Project Overview
-
-For this project, you will use multiple linear regression modeling to analyze house sales in a northwestern county.
-
-### Business Problem
-
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
-
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+These and more are the information that we will be able to provide to the users of the app, starting from our analysis of the King's County Housing Market.
 
 ### The Data
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this assignment's GitHub repository. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+This project uses the King County House Sales dataset, which can be found in kc_house_data.csv. Here is a brief description of the meaning of each column:
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you **ignore** some or all of the following features:
+Column Names and Descriptions for King County Data Set
+id - Unique identifier for a house
+date - Date house was sold
+price - Sale price (prediction target)
+bedrooms - Number of bedrooms
+bathrooms - Number of bathrooms
+sqft_living - Square footage of living space in the home
+sqft_lot - Square footage of the lot
+floors - Number of floors (levels) in house
+waterfront - Whether the house is on a waterfront
+view - Quality of view from house
+condition - How good the overall condition of the house is. Related to maintenance of house.
+grade - Overall grade of the house. Related to the construction and design of the house.
+sqft_above - Square footage of house apart from basement
+sqft_basement - Square footage of the basement
+yr_built - Year when house was built
+yr_renovated - Year when house was renovated
+zipcode - ZIP Code used by the United States Postal Service
+lat - Latitude coordinate
+long - Longitude coordinate
+sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
+sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
 
-* `date`
-* `view`
-* `sqft_above`
-* `sqft_basement`
-* `yr_renovated`
-* `zipcode`
-* `lat`
-* `long`
-* `sqft_living15`
-* `sqft_lot15`
+### How are we going to get there
 
-### Key Points
+Here is a roadmap of the steps that we are going to take:
 
-* **Your goal in regression modeling is to yield findings to support relevant recommendations. Those findings should include a metric describing overall model performance as well as at least two regression model coefficients.** As you explore the data and refine your stakeholder and business problem definitions, make sure you are also thinking about how a linear regression model adds value to your analysis. "The assignment was to use linear regression" is not an acceptable answer! You can also use additional statistical techniques other than linear regression, so long as you clearly explain why you are using each technique.
-
-* **You should demonstrate an iterative approach to modeling.** This means that you must build multiple models. Begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs in the notebook discussing your final model.
-
-* **Data visualization and analysis are no longer explicit project requirements, but they are still very important.** In Phase 1, your project stopped earlier in the CRISP-DM process. Now you are going a step further, to modeling. Data visualization and analysis will help you build better models and tell a better story to your stakeholders.
+Data Preparation:
+Looking at the Data
+Cleaning the Data
+Removing Outliers
+Preparing data: One Hot Encoding
+Linear Regression Model with OHE
+Assumptions of Linear Regression:
+Transformations
+Scaling: Min Max and Normal Scaling
+Linear Regressions with Scaling
+Checking for Multicollinearity
+P-value and F-Statistic
+Linear Regression Model F-statistic
+Feature Engineering:
+Renovations
+Zipcode
+Seasons
+Cross Validation
+Checking for Normality
+Checking for Homoscedasticity
+Train Test Split
+Polynomial Regression
+Third Order Polynomials
+Second Order Polynomials
+Using Polynomial terms to create new variables
+Recommendations
+Next Steps
 
 ## Deliverables
 
