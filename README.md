@@ -46,33 +46,33 @@ Column Names and Descriptions for King County Data Set
 
 Here is a roadmap of the steps that we are going to take:
 
-Data Preparation:
-Looking at the Data
-Cleaning the Data
-Removing Outliers
-Preparing data: One Hot Encoding
-Linear Regression Model with OHE
-Assumptions of Linear Regression:
-Transformations
-Scaling: Min Max and Normal Scaling
-Linear Regressions with Scaling
-Checking for Multicollinearity
-P-value and F-Statistic
-Linear Regression Model F-statistic
-Feature Engineering:
-Renovations
-Zipcode
-Seasons
-Cross Validation
-Checking for Normality
-Checking for Homoscedasticity
-Train Test Split
-Polynomial Regression
-Third Order Polynomials
-Second Order Polynomials
-Using Polynomial terms to create new variables
-Recommendations
-Next Steps
+1 Data Preparation:
+        Looking at the Data
+        Cleaning the Data
+        Removing Outliers
+        Preparing data: One Hot Encoding
+        Linear Regression Model with OHE
+2 Assumptions of Linear Regression:
+        Transformations
+        Scaling: Min Max and Normal Scaling
+        Linear Regressions with Scaling
+        Checking for Multicollinearity
+        P-value and F-Statistic
+        Linear Regression Model F-statistic
+3 Feature Engineering:
+        Renovations
+        Zipcode
+        Seasons
+        Cross Validation
+        Checking for Normality
+        Checking for Homoscedasticity
+        Train Test Split
+4 Polynomial Regression
+        Third Order Polynomials
+        Second Order Polynomials
+        Using Polynomial terms to create new variables
+5 Recommendations
+6 Next Steps
 
 ## Deliverables
 
