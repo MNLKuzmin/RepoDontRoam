@@ -81,10 +81,6 @@ To get a first sense of what type of correlations the variables have with each o
 
 ![HeatMap](./Graphs/HeatMap.png)
 
-LINK TO HEATMAP
-
-LINK TO SCATTER PLOT
-
 ![ScatterPlot](./Graphs/Scatterplot.png)
 
 
@@ -138,9 +134,7 @@ So given the same characteristics on average for a house that was renovated and 
 
 We can see the considerable difference also visually in the following graph:
 
-LINK TO BOXPLOT RENOVATIONS
-
-![Renovations](./Graphs/Box_Reno.png)
+![Renovations](./Graphs/BoxReno.png)
 
 Following one hot encoding, adding the 'renovation' column to the dataframe and running linear regression again: the R squared value obtained was 0.666
 
@@ -158,18 +152,14 @@ There is a gap of roughly 675 thousand dollars!
 
 We can see this also visually in the following graph:
 
-LINK GRAPH BARPLOT ZIPCODE
-
-![Zipcode](./Graphs/Bar_Zipcode.png)
+![Zipcode](./Graphs/BarZipcode.png)
 
 ### Seasons 
 Another variable that we can categorize a little bit better is the date. It is probably hard for the model to categorize based on all the different dates of the sales, but maybe there is a trend there that we can explore. Therefore we are going to extract from the sale date the month, and categorize the sales based on their month to see if that also has an influence on the price of the houses.
 
 We found out that the average price of a house sold in the month of February is 477 K while the one for a house sold in foo April is 511 K.
 
-INSERT BARPLOT MONTH
-
-![Months](./Graphs/Bar_Months.png)
+![Months](./Graphs/BarMonths.png)
 
 We also did one hot encoding with the information about the month and ran one more linear model: We found an R squared value of 0.804.
 
@@ -188,16 +178,12 @@ On the other hand the R2 results are very good and the test performed almost as 
 ### Checking for Normality:
 QQ plot:
 
-INSERT LINK QQ PLOT
-
-![QQplot](./Graphs/QQ_plot.png)
+![QQplot](./Graphs/QQplot.png)
 
 This QQ plot shows us that our sample has pretty heavy tails. But at the same time the central part seems to follow a straight line, there isn't strong evidence to think of a non linear relationship but we will verify that later on.
 
 ### Checking for homoskedasticity:
-Rediue Plot:
-
-INSERT LINK HOMO
+Residue Plot:
 
 ![HOMO](./Graphs/Homoskedasticity.png)
 
@@ -214,9 +200,7 @@ Test Root Mean Squared Error: 88378.10912550481
 Test R squared value: 0.8097102215361878
 Let us take a look at how our the train sample of our model fits compared to the actual data:
 
-INSERT GRAPH SCATTER DATA AND MODEL WITH TEST
-
-![ModelvsData](./Graphs/Model_Vs_Data.png)
+![ModelvsData](./Graphs/ModelVsData.png)
 
 ## Polynomial Regression:
 
@@ -297,27 +281,24 @@ For any additional questions, please contact **Maria Kuzmin, marianlkuzmin@gmail
 Description of the structure of the repository and its contents:
 
 ```
-
-├── images
-    └── blueprint.png
-    └── director_shot.png
-    └── viz1.png
-    ├── Graphs
-        └──Domestic_Gross_per_genre.png
-        └──Domestic_Gross_per_month_of_release.png
-        └──Domestic_net_per_genre.png
-        └──Gross_and_Budget_per_month.png
-        └──Production_Budget_per_month_of_release.png
-        └──ROI_per_genre_with_lines.png
-        └──ROI_per_genre_without_lines.png
-        └──Scatter_known_people_budget.png
-        └──Scatter_known_people_gross.png
-        └──World_Gross_per_month_of_release.png
-        └──Worldwide_gross_per_Genre.png
-        └──Worldwide_net_per_genre.png
- ├── .gitignore
+├── data
+    └── column_names.md
+    └── kc_house_data.csv
+├── Graphs
+    └── BarMonths.png
+    └── BarZipcode.png
+    └── BoxReno.png
+    └── Heatmap.png
+    └── Homoskedasticity.png
+    └── ModelVsData.png
+    └── QQplot.png
+    └── ScatterBathrooms.png
+    └── Scatterplot.png
+    └── ScatterSqfeet.png
+ ├── student.ipynb   
+ ├── CONRTIBUTING.md
  ├── LICENSE.md
- ├── README.md
  ├── Presentation.pdf
- └── A_Genre_Study.ipynb
+ ├── README.md
+ └── untitled
 ```
