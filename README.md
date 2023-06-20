@@ -2,6 +2,8 @@
 
 **Author**: Maria Kuzmin
 
+[Link](https://dev.to/mnlkuzmin/use-of-polynomials-in-linear-regression-analysis-extension-to-linear-models-2636) to blog post about the use of ploynomials in this project.
+
 ## Business Problem - Don't roam buy a home
 
 The real estate startup “Don’t Roam Buy a Home” (DRBH for short) has contacted us as they are trying to create an app targeted at those who do not feel like they can compete in the current brutal real estate market. DRBH’s application is meant for the normal average person that does not have much knowledge about the real estate market but is trying to understand what would be the best investment given their resources and needs.
@@ -21,33 +23,33 @@ These and more are the information that we will be able to provide to the users 
 
 Here is a roadmap of the steps that we are going to take:
 
-* 1 Data Preparation:
-        Looking at the Data,
-        Cleaning the Data,
-        Removing Outliers,
-        ,Preparing data: One Hot Encoding
-        ,Linear Regression Model with OHE
-* 2 Assumptions of Linear Regression:
-        Transformations,
-        Scaling: Min Max and Normal Scaling,
-        Linear Regressions with Scaling,
-        Checking for Multicollinearity,
-        P-value and F-Statistic,
-        Linear Regression Model F-statistic,
-* 3 Feature Engineering:
-        Renovations,
-        Zipcode,
-        Seasons,
-        Cross Validation,
-        Checking for Normality,
-        Checking for Homoscedasticity,
-        Train Test Split
-* 4 Polynomial Regression
-        Third Order Polynomials,
-        Second Order Polynomials,
-        Using Polynomial terms to create new variables
-* 5 Recommendations
-* 6 Next Steps
+1. Data Preparation:
+    - Looking at the Data
+    - Cleaning the Data
+    - Removing Outliers
+    - Preparing data: One Hot Encoding
+    - Linear Regression Model with OHE
+2. Assumptions of Linear Regression:
+    - Transformations
+    - Scaling: Min Max and Normal Scaling
+    - Linear Regressions with Scaling
+    - Checking for Multicollinearity
+    - P-value and F-Statistic
+    - Linear Regression Model F-statistic
+3. Feature Engineering:
+    - Renovations
+    - Zipcode
+    - Seasons
+    - Cross Validation
+    - Checking for Normality
+    - Checking for Homoscedasticity
+    - Train Test Split
+4. Polynomial Regression
+    - Third Order Polynomials
+    - Second Order Polynomials
+    - Using Polynomial terms to create new variables
+5. Recommendations
+6. Next Steps
 
 
 ### The Data
